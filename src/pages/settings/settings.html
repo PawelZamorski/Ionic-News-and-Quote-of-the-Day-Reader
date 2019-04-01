@@ -1,0 +1,89 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>Settings</ion-title>
+  </ion-navbar>
+</ion-header>
+<ion-content padding>
+<!-- Set 'name' -->
+  <ion-list>
+    <ion-item>
+      <ion-label stacked>Enter Name</ion-label>
+      <ion-input type="text" placeholder="name" [(ngModel)]="name"></ion-input>
+    </ion-item>
+  </ion-list>
+<!-- Set 'newspaper' (news source) radio buttons -->
+  <h1>News Source</h1>
+  <ion-list radio-group [(ngModel)]="newspaper">
+    <ion-list-header>
+      Sources
+    </ion-list-header>
+    <ion-item>
+      <ion-label>Reuters</ion-label>
+      <ion-radio value="reuters"></ion-radio>
+    </ion-item>  
+    <ion-item>
+      <ion-label>National Geographic</ion-label>
+      <ion-radio value="nationalGeographic"></ion-radio>
+    </ion-item>
+    <ion-item>
+      <ion-label>BBC Sport</ion-label>
+      <ion-radio value="bbcSport"></ion-radio>
+    </ion-item>      
+  </ion-list>
+<!-- Set Font Size part-->
+  <h1>Font Size</h1>
+<!-- Set 'titleFontSize' size radio buttons -->
+  <ion-list radio-group [(ngModel)]="titleFontSize">
+    <ion-list-header>
+      Title
+    </ion-list-header>
+    <ion-item>
+      <ion-label>1</ion-label>
+      <ion-radio value="one"></ion-radio>
+    </ion-item>
+    <ion-item>
+      <ion-label>2</ion-label>
+      <ion-radio value="two"></ion-radio>
+    </ion-item>
+    <ion-item>
+      <ion-label>3</ion-label>
+      <ion-radio value="three"></ion-radio>
+    </ion-item>
+    <ion-item>
+      <ion-label>4</ion-label>
+      <ion-radio value="four"></ion-radio>
+    </ion-item>
+    <ion-item>
+      <ion-label>5</ion-label>
+      <ion-radio value="five"></ion-radio>
+    </ion-item>
+  </ion-list>
+<!-- Set 'descriptionFontSize' size radio buttons -->
+  <ion-list radio-group [(ngModel)]="descriptionFontSize">
+    <ion-list-header>
+      Description
+    </ion-list-header>
+    <ion-item>
+      <ion-label>1</ion-label>
+      <ion-radio value="one"></ion-radio>
+    </ion-item>  
+    <ion-item>
+      <ion-label>2</ion-label>
+      <ion-radio value="two"></ion-radio>
+    </ion-item>
+    <ion-item>
+      <ion-label>3</ion-label>
+      <ion-radio value="three"></ion-radio>
+    </ion-item>
+    <ion-item>
+      <ion-label>4</ion-label>
+      <ion-radio value="four"></ion-radio>
+    </ion-item>
+    <ion-item>
+      <ion-label>5</ion-label>
+      <ion-radio value="five"></ion-radio>
+    </ion-item>
+  </ion-list>
+  <!-- 'saveSetting' button-->
+  <button ion-button round (click)="saveSettings()">Save</button>
+</ion-content>

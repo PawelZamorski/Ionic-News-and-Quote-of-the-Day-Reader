@@ -1,0 +1,21 @@
+<!-- News Page displaying articles -->
+<ion-header>
+  <ion-navbar>
+    <ion-title>News</ion-title>
+  </ion-navbar>
+</ion-header>
+<ion-content padding>
+  <ion-list>
+    <ion-item text-wrap *ngFor="let article of articles" >
+      <!-- An article image -->
+      <ion-thumbnail>
+        <a href="{{ article.url }}"><img src="{{ article.urlToImage }}"></a>
+      </ion-thumbnail>
+      <!-- An article title -->
+      <a href="{{ article.url }}" [ngStyle]="titleFontSize">{{ article.title }}</a>
+      <br>
+      <!-- An article description -->
+      <a href="{{ article.url }}" [ngStyle]="descriptionFontSize">{{ article.description }}</a>          
+    </ion-item>
+  </ion-list>
+</ion-content>

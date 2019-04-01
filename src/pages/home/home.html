@@ -1,0 +1,19 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>My News App</ion-title>
+    <!-- https://ionicframework.com/docs/api/components/toolbar/Toolbar/ -->
+    <ion-buttons end>
+      <button ion-button icon-only (click)="openSettingsPage()">
+        <ion-icon ios="ios-settings" md="md-settings"></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+</ion-header>
+<ion-content padding>
+  <h1>Welcome {{ name }}</h1>
+  <button ion-button round icon-start (click)="openNewsPage()"><ion-icon ios="ios-globe" md="md-globe"></ion-icon>NEWS</button>
+  <br>
+  <!-- Daily Quote -->
+  <h2>{{ quote }}</h2>
+  <p>{{ author }}</p>
+</ion-content>
